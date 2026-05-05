@@ -1,38 +1,293 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --Green: #B9FF66;
+  --Dark: #191A23;
+  --Gray: #F3F3F3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+  text-decoration: none;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#Header {
+  margin-bottom: 140px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#Navbar {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 100px 0;
+}
+
+#NavLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+#NavLinks a {
+  font-size: 20px;
+}
+
+.rq {
+  padding: 20px 35px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  transition: .3s ease-in;
+}
+
+.rq:hover,
+.ProposalBtn:hover {
+  border-radius: 1px;
+}
+
+#Hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 70px 0;
+  padding: 0 100px;
+  height: 90%;
+}
+
+#HeroText {
+  display: flex;
+  align-items: flex-start;
   flex-direction: column;
+  gap: 45px;
+  width: 530px;
+}
+
+.HeroHead {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.HeroSub {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.consultationBtn,
+.ProposalBtn {
+  padding: 20px 35px;
+  border: 1px solid var(--Dark);
+  background: var(--Dark);
+  border-radius: 15px;
+  transition: .3s ease-in;
+  color: #fff;
+}
+
+.SliderCon {
+  overflow: hidden;
+  background: white;
+  white-space: nowrap;
+  margin: 0 100px;
+  position: relative;
+}
+
+.CarouselLogo {
+  display: flex;
+  align-items: center;
+  margin: 0 100px;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: .3s ease-in;
+}
+
+.CarouselLogo:hover {
+  filter: grayscale(0%);
+}
+
+.SliderTrack {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: calc(250px * 8);
+  animation: scroll 20s linear infinite;
+}
+
+.SliderTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.Section {
+  padding: 0 100px;
+  margin-bottom: 140px;
+}
+
+.SectionTextCon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SectionText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.SectionHead {
+  font-size: 40px;
+  height: 40%;
+  background-image: linear-gradient(120deg, #B9FF66 0%, #B9FF66 100%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0 7px;
+  border-radius: 6px;
+}
+
+.SectionSub {
+  width: 580px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#Services {
+  margin-bottom: 140px;
+}
+
+#ServicesCards {
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ServiceCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  height: 310px;
+  padding: 50px;
+  gap: 70px;
+  border: 1px solid var(--Dark);
+  box-shadow: 0px 5px var(--Dark);
+  border-radius: 45px;
+  transition: .3s ease-in;
+  cursor: pointer;
+}
+
+.ServiceCard:hover {
+  box-shadow: 0px 0px var(--Dark);
+}
+
+.ServiceCardText {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  width: 220px;
+  justify-content: space-between;
+}
+
+.ServiceCardHead {
+  font-size: 30px;
+  background-image: linear-gradient(#B9FF66 0%, #B9FF66 100%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0 7px;
+  border-radius: 6px;
+}
+
+#SEO {
+  background: var(--Gray);
+}
+
+#PPCA {
+  background: var(--Green);
+}
+
+#PPCA .ServiceCardHead {
+  background-image: linear-gradient(#fff 0%, #fff 100%);
+}
+
+#SMM {
+  background: var(--Dark);
+}
+
+#SMM .ServiceCardHead {
+  background-image: linear-gradient(#fff 0%, #fff 100%);
+}
+
+#EM {
+  background: var(--Gray);
+}
+
+#CC {
+  background: var(--Green);
+}
+
+#CC .ServiceCardHead {
+  background-image: linear-gradient(#fff 0%, #fff 100%);
+}
+
+#AT {
+  background: var(--Dark);
+}
+
+#Proposal {
+  padding: 25px 100px;
+  margin-bottom: 140px;
+}
+
+.ProposalCon {
+  position: relative;
+  height: 345px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--Gray);
+  border-radius: 45px;
+  padding: 60px;
+}
+
+.ProposalText {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
+  height: 220px;
+  width: 500px;
+}
+
+.ProposalHead {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.ProposalSub {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.ProposalImg {
+  position: absolute;
+  right: 0;
+}
+
+#Footer * {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
