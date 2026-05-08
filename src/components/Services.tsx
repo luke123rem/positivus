@@ -1,4 +1,3 @@
-import '../App.css'
 import LearnMoreBtn from '../assets/images/icons/learn-more-btn.svg'
 import SEO from '../assets/images/SEO.svg'
 import PPCA from '../assets/images/PPCA.svg'

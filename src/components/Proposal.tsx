@@ -1,10 +1,9 @@
-import '../App.css'
 import ProposalImg from '../assets/images/proposal-img.svg'
 
 function Proposal() {
     return (
         <>
-            <div id="Proposal">
+            <div id="Proposal" className="Section">
                 <div className="ProposalCon">
                     <div className="ProposalText">
                         <h1 className="ProposalHead">Let's make things happen</h1>

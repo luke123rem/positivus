@@ -1,4 +1,3 @@
-import '../App.css'
 import HeroImage from '../assets/images/hero.svg'
 
 function Hero() {

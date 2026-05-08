@@ -10,7 +10,6 @@ function CaseStudies() {
         {
             CaseStudy: "For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales."
         }
-
     ]
 
     return (
@@ -25,10 +24,15 @@ function CaseStudies() {
                 <span className="empty"></span>
             </div>
 
-            <div className="CaseStudies">
+            <div className="CaseStudiesCon">
                 {CaseStudies.map((CaseStudy, i) => (
                     <div className='CaseStudy' key={i}>
-                        <p className="CaseStudyText">{CaseStudy.CaseStudy}</p>
+                        <h2 className="CaseStudyText">{CaseStudy.CaseStudy}</h2>
+                        <a href="#" className="CaseStudyLM">
+                            Learn More
+
+                            <svg  xmlns="http://www.w3.org/2000/svg" viewBox={"0 0 24 24"}><path d="M17 16V7H8v2h5.59l-6.3 6.29 1.42 1.42 6.29-6.3V16z"></path></svg>
+                        </a>
                     </div>
                 ))}
             </div>

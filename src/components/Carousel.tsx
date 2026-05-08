@@ -1,4 +1,3 @@
-import '../App.css'
 import Amazon from '../assets/images/icons/amazon.svg'
 import Dribble from '../assets/images/icons/dribble.svg'
 import HubSpot from '../assets/images/icons/hubspot.svg'
