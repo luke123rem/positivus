@@ -530,6 +530,12 @@ body {
   font-size: 18px;
 }
 
+.ContactRadioBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .ContactRadio {
   width: 30px;
   height: 30px;
@@ -1011,6 +1017,10 @@ body {
     padding: 0 15px;
   }
 
+  .ProposalCon {
+    padding: 25px;
+  }
+
   .CaseStudy {
     padding: 20px 0px;
   }
@@ -1034,5 +1044,43 @@ body {
 
   .TeamCard {
     width: 100%;
+    height: 100%;
   }
+}
+
+@media screen and (max-width: 400px) {
+  #Logo img {
+    width: 70%;
+  }
+
+  .Section {
+    padding: 0 10px;
+  }
+
+  .TeamCard {
+    padding: 25px;
+  }
+
+  .TeamSocial {
+    right: 25px;
+  }
+
+  .TeamInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #Footer {
+    padding: 0;
+  }
+
+  .FooterContactSubscribe {
+    padding: 10px;
+  }
+
+  .FooterContactSubBtn, .FooterContactSubEmail {
+    width: 100%;
+  }
+
 }

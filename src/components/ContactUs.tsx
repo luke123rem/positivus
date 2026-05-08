@@ -15,12 +15,15 @@ function ContactUs() {
                 <div className="ContactUsCon">
                     <div className="ContactUsDetails">
                     <div className="ContactRadios">
+                        <div className="ContactRadioBox">
                         <input type="radio" name="ContactRadio" id="ContactSayHi" className="ContactRadio" checked />
                         <label htmlFor="ContactSayHi">Say Hi</label>
+                        </div>
 
+                    <div className="ContactRadioBox">
                         <input type="radio" name="ContactRadio" id="ContactQuote" className="ContactRadio" />
                         <label htmlFor="ContactQuote">Get a Quote</label>
-
+                    </div>
 
                     </div>
 
