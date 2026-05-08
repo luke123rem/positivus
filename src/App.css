@@ -762,7 +762,7 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1450px) {
   #Navbar {
     padding: 25px;
     border: 1px solid black;
