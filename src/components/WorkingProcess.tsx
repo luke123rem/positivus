@@ -65,9 +65,8 @@ function WorkingProcess() {
                                     <p className="WorkingProcessCardHead">{WorkingProcessCard.WorkingProcessHead}</p>
                                 </div>
                                 
-                                <div className="WorkingProcessCardIcon">
-                                    <img src={selected === index ? Minimize : Maximize} className="MinimizeIcon" />
-                                </div>
+                                <img src={selected === index ? Minimize : Maximize} className="WorkingProcessCardIcon" />
+                                
                             </div>
 
                             <div className={selected === index ? "WorkingProcessCardHidden" : "WorkingProcessCardHidden hidden"}>

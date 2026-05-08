@@ -41,7 +41,7 @@ function ContactUs() {
                         </div>
                     </form>
 
-                    <a href="https://google.com" className="ContactSendBtn">Send Message</a>
+                    <a href="https://google.com" className="ContactSendBtn" target="_blank" rel="noopener noreferrer">Send Message</a>
                 </div>
 
                 <img src={ContactImg} alt="" className="ContactImg" />

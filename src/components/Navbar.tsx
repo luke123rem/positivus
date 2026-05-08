@@ -1,19 +1,17 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Logo from '../assets/images/icons/logo.svg'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <BrowserRouter>
     <nav id="Navbar">
         <div id="Logo">
             <img src={Logo} alt="Logo" />
         </div>
 
         <div id="NavLinks" className={isMenuOpen ? 'active' : ''}>
-            <Link to="">About us</Link>
+            <a href="#">About us</a>
             <a href="#">Services</a>
             <a href="#">Use Cases</a>
             <a href="#">Pricing</a>
@@ -27,12 +25,6 @@ function Navbar() {
           <span className="bar"></span>
       </div>
     </nav>
-
-    <Routes>
-            
-    </Routes>
-
-    </ BrowserRouter>
   );
 }
 
