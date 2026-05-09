@@ -3,6 +3,20 @@ import LinkedIn from '../assets/images/icons/linkedin.svg'
 import Facebook from '../assets/images/icons/facebook.svg'
 import Twiter from '../assets/images/icons/twitter.svg'
 
+type SocialIconProps = {
+  href: string;
+  src: string;
+  alt: string;
+};
+
+function SocialIcon({ href, src, alt }: SocialIconProps) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <img src={src} alt={alt} />
+    </a>
+  );
+}
+
 function Footer() {
     return (
         <>
@@ -20,10 +34,10 @@ function Footer() {
                     </div>
 
                     <div className="FooterSocials">
-                        <img src={LinkedIn} alt="" />
-                        <img src={Facebook} alt="" />
-                        <img src={Twiter} alt="" />
-                    </div>
+                        <SocialIcon href="https://linkedin.com" src={LinkedIn} alt="LinkedIn" />
+                        <SocialIcon href="https://facebook.com" src={Facebook} alt="Facebook" />
+                        <SocialIcon href="https://twitter.com" src={Twiter} alt="Twitter" />
+                     </div>
                 </div>
 
                 <div className="FooterContact">
