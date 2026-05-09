@@ -5,6 +5,8 @@ import SMM from '../assets/images/SMM.svg'
 import  EM from '../assets/images/EM.svg'
 import CC from '../assets/images/CC.svg'
 import AT from '../assets/images/AT.svg'
+import LearnMoreLightArrow from '../assets/images/icons/service-card-lm-light.svg'
+import LearnMoreDarkArrow from '../assets/images/icons/service-card-lm-dark.svg'
 
 function Services() {
 
@@ -12,32 +14,38 @@ function Services() {
         {
             ServiceHead: "Search engine optimization",
             ServiceImg: SEO,
-            SpecialName: "SEO"
+            SpecialName: "SEO",
+            arrowTheme: "dark"
         },
         {
             ServiceHead: "Pay-per-click Advertising",
             ServiceImg: PPCA,
-            SpecialName: "PPCA"
+            SpecialName: "PPCA",
+            arrowTheme: "dark"
         },
         {
             ServiceHead: "Social Media Marketing",
             ServiceImg: SMM,
-            SpecialName: "SMM"
+            SpecialName: "SMM",
+            arrowTheme: "light"
         },
         {
             ServiceHead: "Email Marketing",
             ServiceImg: EM,
-            SpecialName: "EM"
+            SpecialName: "EM",
+            arrowTheme: "dark"
         },
         {
             ServiceHead: "Content Creation",
             ServiceImg: CC,
-            SpecialName: "CC"
+            SpecialName: "CC",
+            arrowTheme: "dark"
         },
         {
             ServiceHead: "Analytics and Tracking",
             ServiceImg: AT,
-            SpecialName: "AT"
+            SpecialName: "AT",
+            arrowTheme: "light"
         },
     ]
 
@@ -60,11 +68,15 @@ function Services() {
                     <div className='ServiceCard'  id={ServiceCard.SpecialName} key={i}>
                         <div className="ServiceCardText">
                             <h2 className="ServiceCardHead">{ServiceCard.ServiceHead}</h2>
-                            <img src={LearnMoreBtn} alt="" />
+                            <div className="ServiceCardLearnMore">
+                            <img src={ServiceCard.arrowTheme === "light" ? LearnMoreLightArrow : LearnMoreDarkArrow} alt="arrow" />
+
+                            <span className={ServiceCard.arrowTheme === "light" ? "ServiceCardLM light" : "ServiceCardLM dark"}>Learn more</span>
+                        </div>
                         </div>
 
-                        <img src={ServiceCard.ServiceImg} alt="" />
-                        </div>
+                        <img src={ServiceCard.ServiceImg} alt="" className="ServiceImage" />                        
+                    </div>
                 ))
                 }
             </div>

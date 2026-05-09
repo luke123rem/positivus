@@ -65,14 +65,28 @@
 
 .rq {
   padding: 20px 35px;
+  background: #fff;
   border: 1px solid #000;
   border-radius: 15px;
   transition: .3s ease-in;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .rq:hover,
 .ProposalBtn:hover {
   border-radius: 1px;
+}
+
+.QuoteBox {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 250px;
 }
 
 .hamburger {
@@ -225,8 +239,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  align-items: center;
-  justify-content: center;
+  justify-items: center;
 }
 
 .ServiceCard {
@@ -299,6 +312,24 @@
 
 #AT {
   background: var(--Dark);
+}
+
+.ServiceCardLearnMore {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ServiceCardLM {
+  font-size: 20px;
+}
+
+.ServiceCardLM.light {
+  color: white;
+}
+
+.ServiceCardLM.dark {
+  color: #000;
 }
 
 #Proposal {
@@ -661,6 +692,15 @@
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+SocialIcon {
+  cursor: pointer;
+  transition: .3s ease-in;
+}
+
+SocialIcon:hover {
+  transform: scale(1.025);
 }
 
 .FooterContact {
@@ -1146,7 +1186,7 @@
     width: 100%;
   }
 
-  .ServiceCard img {
+  .ServiceImage {
     width: 60%;
     height: 60%;
   }
@@ -1197,6 +1237,18 @@
 
   #FooterCon {
     padding: 30px 20px 15px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .TeamInfo {
+    align-items: flex-start;
+  }
+
+  .TeamInfoText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
