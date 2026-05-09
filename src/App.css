@@ -17,6 +17,7 @@
   font-family: 'Space Grotesk', sans-serif;
   text-decoration: none;
   color: #000;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -78,15 +79,73 @@
   border-radius: 1px;
 }
 
-.QuoteBox {
+.QuoteModal {
   position: fixed;
-  top: 80px;
-  right: 20px;
-  background: white;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.QuoteContent {
+  text-align: center;
+  color: white;
+  width: 70%;
+  margin-bottom: 30px;
+}
+
+.QuoteContent h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.QuoteContent p {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.CloseModal {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 50px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.QuoteShareBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.QuoteShareBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.QuoteShareBtn button {
+  display: flex;
+  align-items: center;
+  outline: 0;
+  border: 0;
+  background: var(--Gray);
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  max-width: 250px;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -1063,6 +1122,13 @@ SocialIcon:hover {
 }
 
 @media screen and (max-width: 500px) {
+  .QuoteShareBtns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+
   .Section {
     padding: 0 15px;
   }

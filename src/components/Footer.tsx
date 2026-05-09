@@ -1,7 +1,7 @@
 import FooterLogo from '../assets/images/icons/logo-light.svg'
-import LinkedIn from '../assets/images/icons/linkedin.svg'
-import Facebook from '../assets/images/icons/facebook.svg'
-import Twiter from '../assets/images/icons/twitter.svg'
+import LinkedIn from '../assets/images/icons/linkedin-footer.svg'
+import Facebook from '../assets/images/icons/facebook-footer.svg'
+import Twiter from '../assets/images/icons/twitter-footer.svg'
 
 type SocialIconProps = {
   href: string;
