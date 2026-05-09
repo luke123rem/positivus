@@ -27,24 +27,26 @@ function ContactUs() {
 
                     </div>
 
-                    <form action="#" className="ContactForm">
+                    <form action="https://formspree.io/f/mwvyrzge" className="ContactForm" method="POST">
                         <div className="ContactInputBox">
                         <label htmlFor="ContactName">Name*</label>
-                        <input type="text" id="ContactName" placeholder="Name" className="ContactInput" required />
+                        <input name="name" type="text" id="ContactName" placeholder="Name" className="ContactInput" required />
                         </div>
 
                         <div className="ContactInputBox">
                             <label htmlFor="ContactEmail">Email*</label>
-                            <input type="email" id="ContactEmail" placeholder="Email" className="ContactInput" required />
+                            <input name="email" type="email" id="ContactEmail" placeholder="Email" className="ContactInput" required />
                         </div>
 
                         <div className="ContactInputBox">
                             <label htmlFor="ContactMessage">Message*</label>
-                            <textarea id="ContactMessage" placeholder="Message" className="ContactInput" required></textarea>
+                            <textarea name="message" id="ContactMessage" placeholder="Message" className="ContactInput" required></textarea>
                         </div>
+
+                        <button type="submit" className="ContactSendBtn">Send Message</button>
+
                     </form>
 
-                    <button type="submit" className="ContactSendBtn">Send Message</button>
                 </div>
 
                 <img src={ContactImg} alt="" className="ContactImg" />

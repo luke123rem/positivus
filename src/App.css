@@ -531,7 +531,6 @@
 .ContactRadios {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 35px;
   margin-bottom: 40px;
 }
@@ -615,7 +614,7 @@
 }
 
 .ContactSendBtn {
-  width: 100%;
+  width: 50%;
   text-align: center;
 }
 
@@ -765,11 +764,9 @@
 @media screen and (max-width: 1450px) {
   #Navbar {
     padding: 25px;
-    border: 1px solid black;
   }
 
   #NavLinks {
-    border: 1px solid black;
     position: fixed;
     padding: 20px;
     background: #fff;
@@ -944,7 +941,6 @@
   }
 
   .ServiceCard {
-    height: 100%;
     width: 100%;
     flex-direction: column;
   }
@@ -1002,6 +998,14 @@
     width: 70%;
   }
 
+    .SliderCon {
+    margin: 0 40px;
+  }
+
+  .CarouselLogo {
+    margin: 0 40px;
+  }
+
   .Section {
     padding: 0 25px;
   }
@@ -1011,8 +1015,8 @@
   }
 
   .ServiceCard {
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
   }
 
   .CaseStudiesCon {
@@ -1022,10 +1026,6 @@
 }
 
 @media screen and (max-width: 500px) {
-  .SliderCon {
-    margin: 0 40px;
-  }
-
   .Section {
     padding: 0 15px;
   }
@@ -1073,14 +1073,28 @@
   }
 }
 
+@media screen and (max-width: 450px){
+    #Logo {
+    width: 55%;
+  }
+}
+
 @media screen and (max-width: 400px) {
 
   #NavLinks {
     top: 95px;
   }
 
-  #Logo img {
-    width: 70%;
+  #Hero {
+    margin: 120px 0;
+  }
+
+  #HeroText {
+    gap: 30px;
+  }
+
+  .CarouselLogo {
+    height: 60%;
   }
 
   .SliderCon {

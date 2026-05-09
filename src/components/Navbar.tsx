@@ -6,9 +6,7 @@ function Navbar() {
 
   return (
     <nav id="Navbar">
-        <div id="Logo">
-            <img src={Logo} alt="Logo" />
-        </div>
+        <img src={Logo} alt="Logo" id="Logo" />
 
         <div id="NavLinks" className={isMenuOpen ? 'active' : ''}>
             <a href="#">About us</a>
